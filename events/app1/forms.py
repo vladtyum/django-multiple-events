@@ -1,5 +1,6 @@
 from django import forms
 from app1.models import EventDate
+from django.forms import formset_factory
 
 class EventDateForm(forms.ModelForm):
     class Meta:
@@ -7,8 +8,4 @@ class EventDateForm(forms.ModelForm):
         fields = ['event', 'pub_date']
 
 
-# EventDateFormset = inlineformset_factory(
-#                         Event, EventDate,
-#                         form = EventDateForm,
-#                         extra=1
-#                         )
+EventDateFormset = formset_factory(EventDateForm, extra=2)
