@@ -1,1 +1,5 @@
 <h5>Event App</h5>
+
+{% for eventdate in eventsdate_list %}
+    <p>{{ eventdate.event.name }} {{eventdate.pub_date }}</p>
+{% endfor %}

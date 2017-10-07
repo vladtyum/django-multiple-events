@@ -11,4 +11,4 @@ class EventDate(models.Model):
     pub_date = models.DateTimeField()
 
     def __str__(self):
-        return self.event, str(self.pub_date)
+        return '{} {}'.format(self.event.name, self.pub_date)
